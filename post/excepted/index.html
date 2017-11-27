@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.31-DEV" />
+
+  <title>Excepted details &amp; Storage Third Party Data &middot; My New Hugo Site</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://zzjack.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Excepted details &amp; Storage Third Party Data</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>09 Nov 2017, 14:40</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  
+
+<h1 id="excepted-details">Excepted details</h1>
+
+<p>Should i display the details of error message to calling party?</p>
+
+<p>It depends.If calling party cares the reason of error should do,or not.</p>
+
+<p>Now my calling party don&rsquo;t care,but i try to display.</p>
+
+<p>Because i think it is convenient to debug in the subconsious.</p>
+
+<p>Yes,it is.But it brings more trouble at same time.As shown:</p>
+
+<pre><code>class ZX(NotGet):
+    def post(self,request)-&gt;JsonResponse:
+        try:
+            py_obj = json.loads(request.body)
+            zx = zxorm()
+            if zx.main(py_obj):
+                return JsonResponse(self.success)
+            else:
+                raise Exception(&quot;ZX query or storatrge error&quot;)
+        except:
+            logger.error(&quot;ZX error traceback&quot;,exc_info=True)
+            return JsonResponse(self.classNum_empty)
+</code></pre>
+
+<h1 id="storage-third-party-data">Storage Third Party Data</h1>
+
+<p>Many people heard a joke about how to put an elephant in fridge.</p>
+
+<p>The steps are clear and simple.But how to store Third Party data in database?</p>
+
+<p>Can you come up with a method that is as simple as the joke said.</p>
+
+<p>I am not,so i often can easily find out where are bugs in my program.</p>
+
+<p>my job is that relay user data to Third Party and store the response.</p>
+
+<p>Recently i have some experience and want to share to you:</p>
+
+<ol>
+<li>Verify the received data.</li>
+</ol>
+
+<p>If received data not illegal,program should not request Third Party.</p>
+
+<ol>
+<li><p>Request Third Party.</p>
+
+<ol>
+<li><p>transform recived data to satisfy the requirement posted by Third Party.</p></li>
+
+<li><p>send request.</p></li>
+</ol></li>
+
+<li><p>Parse the response.</p>
+
+<ul>
+<li>The response of Third Party is not always one style.</li>
+<li>Even though the style is right,but you may not need to store all data.</li>
+<li>saved in database needs some style.</li>
+</ul></li>
+
+<li><p>Storage.</p>
+
+<ul>
+<li>you should be careful of this step.Although the data has been parsed,it may still have some bugs.So the &ldquo;try&hellip; except&hellip;&rdquo; is necessary.</li>
+</ul></li>
+</ol>
+
+<p>When i finally figured out the four steps,i suddenly recalled a method of organize struct:&ldquo;top-down&rdquo;.</p>
+
+<p>The premise of top-down is that building a clear module.</p>
+
+
+  
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="https://zzjack.github.io/js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

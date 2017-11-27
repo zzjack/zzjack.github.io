@@ -6,9 +6,24 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 09 Nov 2017 14:40:04 +0800</lastBuildDate>
     
 	<atom:link href="https://zzjack.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Excepted details &amp; Storage Third Party Data</title>
+      <link>https://zzjack.github.io/post/excepted/</link>
+      <pubDate>Thu, 09 Nov 2017 14:40:04 +0800</pubDate>
+      
+      <guid>https://zzjack.github.io/post/excepted/</guid>
+      <description>Excepted details Should i display the details of error message to calling party?
+It depends.If calling party cares the reason of error should do,or not.
+Now my calling party don&amp;rsquo;t care,but i try to display.
+Because i think it is convenient to debug in the subconsious.
+Yes,it is.But it brings more trouble at same time.As shown:
+class ZX(NotGet): def post(self,request)-&amp;gt;JsonResponse: try: py_obj = json.loads(request.body) zx = zxorm() if zx.main(py_obj): return JsonResponse(self.</description>
+    </item>
     
   </channel>
 </rss>

@@ -3,12 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zzjack.github.io/post/excepted/</loc>
+    <lastmod>2017-11-09T14:40:04+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zzjack.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zzjack.github.io/</loc>
+    <lastmod>2017-11-09T14:40:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zzjack.github.io/post/</loc>
+    <lastmod>2017-11-09T14:40:04+08:00</lastmod>
     <priority>0</priority>
   </url>
   
