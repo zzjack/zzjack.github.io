@@ -2,37 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ZZJACK BLOG</title>
-    <link>https://zzjack.github.com/</link>
+    <link>https://zzjack.github.io/</link>
     <description>Recent content on ZZJACK BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 28 Nov 2017 11:05:12 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Nov 2017 13:54:14 +0800</lastBuildDate>
     
-	<atom:link href="https://zzjack.github.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zzjack.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Linux command</title>
+      <link>https://zzjack.github.io/post/linux_command/</link>
+      <pubDate>Tue, 28 Nov 2017 13:54:14 +0800</pubDate>
+      
+      <guid>https://zzjack.github.io/post/linux_command/</guid>
+      <description>&amp;gt;&amp;gt; &amp;amp; &amp;gt; symobol &amp;ldquo;&amp;gt;&amp;gt;&amp;rdquo; and &amp;ldquo;&amp;gt;&amp;rdquo; can redirect message to a file. + &amp;ldquo;&amp;gt;&amp;rdquo; will override the origin file. + &amp;ldquo;&amp;gt;&amp;gt;&amp;rdquo; just append message to the file.</description>
+    </item>
+    
+    <item>
       <title>About Me</title>
-      <link>https://zzjack.github.com/about/</link>
+      <link>https://zzjack.github.io/about/</link>
       <pubDate>Tue, 28 Nov 2017 11:05:12 +0800</pubDate>
       
-      <guid>https://zzjack.github.com/about/</guid>
-      <description>I am Zz.Jack living in HangZhou.China. Major profession in college is Chinese Literature, but I am interested in programming. So I got a python engineer job after graduation. I like python and golang,and find that golang is more fun. My We_Chat is Jack04240905. Welcome to contact with me.</description>
+      <guid>https://zzjack.github.io/about/</guid>
+      <description>I am Zz.Jack in HangZhou.China.
+Major profession in college was Chinese Literature.
+For living, I chose to devote myselft to a python engineer after graduation.
+Unexpected, I got lots of joys from programming.
+Now I do not code for living but for fun.</description>
     </item>
     
     <item>
       <title>Excepted details &amp; Storage Third Party Data</title>
-      <link>https://zzjack.github.com/post/excepted/</link>
+      <link>https://zzjack.github.io/post/excepted/</link>
       <pubDate>Thu, 09 Nov 2017 14:40:04 +0800</pubDate>
       
-      <guid>https://zzjack.github.com/post/excepted/</guid>
+      <guid>https://zzjack.github.io/post/excepted/</guid>
       <description>Excepted details Should i display the details of error message to calling party?
 It depends.If calling party cares the reason of error should do,or not.
 Now my calling party don&amp;rsquo;t care,but i try to display.
 Because i think it is convenient to debug in the subconsious.
 Yes,it is.But it brings more trouble at same time.As shown:
 class ZX(NotGet): def post(self,request)-&amp;gt;JsonResponse: try: py_obj = json.loads(request.body) zx = zxorm() if zx.main(py_obj): return JsonResponse(self.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zzjack.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzjack.github.io/contact/</guid>
+      <description>My WeChat id is Jack04240905.
+Welcome to contact with me :).</description>
     </item>
     
   </channel>
